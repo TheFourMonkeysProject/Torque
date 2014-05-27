@@ -4,6 +4,8 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var http = require('http');
+var util = require('util');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -58,4 +60,19 @@ app.use(function(err, req, res, next) {
 });
 
 
-module.exports = app;
+http.createServer(app);
+// Start the app by listening on <port>
+//var port = process.env.PORT || 3000
+//app.listen(port)
+
+if(require.main==module){
+	process.env.PORT = 3000;
+	//app.get('port');
+	app.listen(3001, function(){
+		console.info('Express server listening on port ' + app.get('port'));
+	});
+}
+else{
+	console.info('Building app as module')
+	module.exports = app;
+}
