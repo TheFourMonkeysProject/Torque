@@ -4,6 +4,7 @@ head
 	title= title
 	link(rel='stylesheet', href='/bootstrap-3.1.1/css/bootstrap.min.css')
 	link(rel='stylesheet', href='/bootstrap-3.1.1/css/dashboard.css')
+	link(rel='stylesheet', href='/bootstrap-3.1.1/css/stickey-footer.css')
 	script(type='text/javascript', href='/bootstrap-3.1.1/js/boostrap.min.js')
 	script(type='text/javascript', href='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
 	script(type='text/javascript', href='/bootstrap-3.1.1/js/docs.min.js')
@@ -19,7 +20,7 @@ body
 			div(class="navbar-collapse collapse")
 				ul(class="nav navbar-nav navbar-right")
 					li
-						a(href="#") Dashboard
+						a(href="http://www.fourmonkeys.org") The FourMonkeys Project
 					li
 						a(href="#") Settings
 					li
@@ -33,7 +34,7 @@ body
 			div(class="col-sm-3 col-md-2 sidebar")
 				ul(class="nav nav-sidebar")
 					li
-						a(href="#") Overview
+						a(href="myhome")<img src="/images/navigation/Control_panel_logo.png", height="50px", width="50px"></img>
 					li
 						a(href="#")	My Lessons
 					li
@@ -53,12 +54,47 @@ body
 					li
 						a(href="#") Computer Science
 	div(class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main")
-		h1(class="page-header") Hi Sasha!
-		div(class="row placeholders")
-			div(class="col-xs-6 col-sm-3 placeholder")
-				iframe(width="760", height="515", src="//www.youtube.com/embed/WG4FyoCjgdk", frameborder="0", allowfullscreen)
-    
-		h1(class="page-header") Recommended Courses
+		<strong>Hi Sasha!</strong><br/><br/>
+		
+		div(class="row")
+			div(class="col-md-8")
+				div(class="panel panel-default")
+					div(class="panel-heading")
+						h3(class="panel-title")	<h3>Lets learn something new today.</h3> 
+					div(class="panel-body") From your control panel, you can start a new set of courses or keep track of your badges earned.
+						br
+						br
+						div(class="row")
+							div(class="col-md-6") <strong>Start a new Track</strong> </br>
+								p <br/> A track is a collection of courses designed to help you become experts at a particular fundamental skill. After successfully completeing the track, you earn a badge indicating your mastery of the subject mattter. 
+								btn(type="button", class="btn btn-lg btn-primary") Start a Track
+							div(class="col-md-6") <strong>Review your current Tracks</strong>
+								p <br/> Take a peek at your completed and in progress tracks. Its always good to know where you've been to stay focused on where you are going. 
+								btn(type="button", class="btn btn-lg btn-primary") Review Tracks
+		div(class="row")
+			div(class="col-md-8")
+				div(class="panel panel-default")
+					div(class="panel-heading")
+						h3(class="panel-title")	<h3>My Badges</h3> <strong>Because you're awesome and we celebrate awesome.</strong> 	
+					div(class="panel-body")
+						div(class="row")
+								div(class="col-md-3")
+									<img src="/images/badges/gearmaster.jpg"></img>
+								div(class="col-md-3")
+									<img src="/images/badges/loopmaster.jpg"></img>
+								div(class="col-md-3")
+									<img src="/images/badges/linedetectormaster.jpg"></img>
+								div(class="col-md-3")
+									<img src="/images/badges/linefollowingexpert.jpg"></img>
+						div(class="row")
+								div(class="col-md-3")
+									<img src="/images/badges/linefollowingexpert.jpg"></img>
+								div(class="col-md-3")
+								div(class="col-md-3")
+						br
+						br
+						br
+		h2(class="page-header") Recommended Courses
 		div(class="row")
 			div(class="col-sm-4")
 				div(class="panel panel-default")
@@ -85,5 +121,7 @@ body
 						h3(class="panel-title")
 							a(href="/course")	Introduction to Robotics Programming
 						div(class="panel-body") This course teaches the fundamentals of robotics programming and algorithm design. 
-		
-					
+	div(id="footer")
+		div(class="container")
+			p(class="text-muted")
+				<a href="http://www.facebook.com">Facebook</a>	|	<a href="http://www.fourmonkeys.org"> The FourMonkeys Project</a>
