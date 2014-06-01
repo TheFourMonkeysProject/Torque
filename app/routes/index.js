@@ -37,6 +37,19 @@ router.get('/myhome', function(req, res) {
   res.render('myhome');
 });
 
+/* GET home page. */
+router.get('/intro-to-robotics', function(req, res) {
+  res.render('intro-to-robotics');
+});
+
+/* GET home page. */
+router.get('/intro-to-ev3', function(req, res) {
+  res.render('intro-to-ev3');
+});
+/* GET home page. */
+router.get('/intro-to-gears', function(req, res) {
+  res.render('intro-to-gears');
+});
 
 /*
 	Login to app or return to login page if pwd/user incorrect or not found. 

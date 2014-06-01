@@ -1,0 +1,137 @@
+doctype html
+html
+head
+	title= title
+	link(rel='stylesheet', href='/bootstrap-3.1.1/css/bootstrap.min.css')
+	link(rel='stylesheet', href='/bootstrap-3.1.1/css/dashboard.css')
+	link(rel='stylesheet', href='/bootstrap-3.1.1/css/stickey-footer.css')
+	link(rel='stylesheet', href='/bootstrap-3.1.1/css/fourmonkeys.css')
+	script(type='text/javascript', href='/bootstrap-3.1.1/js/boostrap.min.js')
+	script(type='text/javascript', href='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+	script(type='text/javascript', href='/bootstrap-3.1.1/js/docs.min.js')
+body
+	div(class="navbar navbar-inverse navbar-fixed-top" role="navigation")
+		div(class="container-fluid")
+			button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
+				span(span class="sr-only") Toggle navigation
+				span(class="icon-bar")
+				span(class="icon-bar")
+				span(class="icon-bar")
+			a(class="navbar-brand" href="#") Torque
+			div(class="navbar-collapse collapse")
+				ul(class="nav navbar-nav navbar-right")
+					li
+						a(href="#") Dashboard
+					li
+						a(href="#") Settings
+					li
+						a(href="#") Profile
+					li
+						a(href="#") Help
+
+						
+	div(class="container-fluid")
+		div(class="row")
+			div(class="col-sm-3 col-md-2 sidebar")
+				ul(class="nav nav-sidebar")
+					li
+						a(href="#") Overview
+					li
+						a(href="#")	My Lessons
+					li
+						a(href="#") My Badges
+					li
+						a(href="#") My Classroom
+						
+				ul(class="nav nav-sidebar")
+					li
+						a(href="#") Search Lessons
+					li
+						a(href="#") Biology
+					li
+						a(href="#") Chemistry
+					li
+						a(href="#") Math
+					li
+						a(href="#") Computer Science
+						
+		div(class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main")
+			h3(class="page-header") Introduction to Gears
+			div(class="row placeholders")
+				div(class="col-xs-6 col-sm-3 placeholder")
+					iframe(width="760", height="515", src="//www.youtube.com/embed/Ml1J5w20tB4", frameborder="0", allowfullscreen)
+			br
+			h3(class="page-header") Background Information
+			div(class="row")
+				div(class="col-md-12")
+					div(class="panel panel-default")
+						div(class="panel-heading")
+							h3(class="panel-title") Why learn about gears?
+						div(class="panel-body") Gears are an important part of robots. With gears we can make our bots got faster or slower and have less torque or more torque. This lesson will help you understand what a gear is and how to use them when building robots so solve tasks. 
+			div(class="row")
+				div(class="col-md-12")
+					div(class="panel panel-default")
+						div(class="panel-heading")
+							h3(class="panel-title") So what is a gear?
+						div(class="panel-body") A gear is one of a set of toothed wheels that work together to alter the relation between the speed of a driving mechanism and the speed of the driven parts. 
+			div(class="row")
+				div(class="col-md-12")
+					div(class="panel panel-default")
+						div(class="panel-heading")
+							h3(class="panel-title") Why do we need gears? 
+						div(class="panel-body") Gears do all sorts of things. A small motor can generate lots of power, but sometimes not enough to add torque (turning power).  When we reduce the output speed, we can increase torque.  Some other uses of gears are to reverse the direction of rotation, to synchronize the rotation of two axes, and to move motion to another axis.  
+			div(class="row")
+				div(class="col-md-12")
+					div(class="panel panel-default")
+						div(class="panel-heading")
+							h3(class="panel-title") TASK: Identify the different types of gears
+						div(class="panel-body") <strong>Spur Gears: </strong>The most common gear, they have straight teeth and are mounted on parallel Shafts. Spur gears can be combined to create very powerful gear reductions.
+								img(src="/images/gears/spurgears.jpg")
+								div( class="alert alert-info") <strong> Engineering tip:</strong> Gears are identified by their type and number of teeth. For example, the gears above, from left to right are: An 8 tooth spur gear, a 16 tooth spur gear, another 16 tooth spur gear, a 24 and 40 tooth spur gear. 
+								p <strong>Helical Gears:</strong> Similar to spur gears, bevel gears have teeth  that are angled towards the gears face, giving them more contact in the same area. These gears are quieter than Spur gears.  
+								img(src="/images/gears/Helical.jpg")			
+								p <strong>Bevel Gears:</strong> Bevel gears are used to change the direction of the shaft. They are typicall designed to be mounted together at angles (90 degress is the most common). 
+								img(src="/images/gears/tandstang.jpg")
+								
+			div(class="row")
+				div(class="col-md-12")
+					div(class="panel panel-default")
+						div(class="panel-heading")
+							h3(class="panel-title") Gear ratios
+						div(class="panel-body") Some of the common uses of gears are increase or decrease rotation speed, increase or decrease torque, and to change the rotation direction. Rather than randomly trying different gear combinations, we can mathematically determine the gears to use to accomplish our desired result. 
+							
+							p <br/> Using this <strong>Gear ratio</strong> we can calculate the number of rotations that we can create or reduce. 
+							div( class="alert alert-info") <strong> Mathematics tip:</strong> The <strong>gear ratio</strong> is determined by dividing the number of teeth of the driving gear by the number of teeth in the driven gear. 
+							p Two terms are relevent here: <strong>Gearing Up</strong> and <strong>Gearing Down</strong>. These result in either increasing speed or increasing torque. Torque, or power, is <strong>inversely proportional</strong> to speed. Meaning that an increase in speed results in a decrease in power. 
+			div(class="row")
+				div(class="col-md-12")
+					div(class="panel panel-default")
+						div(class="panel-heading")
+							h3(class="panel-title") Gearing up
+						div(class="panel-body") To increase speed and reduce torque use a large drive gear coupled to a smaller driven gear. In the example below we use a 40 tooth drive gear to turn smaller gears to get the illustrated gear ratios.So the 8 tooth gear will turn 5 complete rotations for the every rotation of the 40 tooth gear. The motor has been geared up.
+							img(src="/images/gears/increasespeed.jpg")
+			div(class="row")
+				div(class="col-md-12")
+					div(class="panel panel-default")
+						div(class="panel-heading")
+							h3(class="panel-title") Gearing down
+						div(class="panel-body") To reduce speed and increase torque use a small Lego gear turning a larger gear. For the 40 tooth gear in this example the gear ratio is 8/40, or 1/5. This gear ratio can also be written as 40:8 or 5:1.So for every five rotations of the 8 tooth gear, the 40 tooth gear will have turned only once. The motor has been geared down.
+							img(src="/images/gears/decreasingspeed.jpg")
+							p Notice that you can combine gears in a chain or series to achieve different gear ratios. The gear ratio of a gear chain is calculated by multiplying the successive ratio of drive gears divided by driven gears. Here that would be: (8/20*20/24= 160/480=1/3 or 3:1)
+			div(class="row")
+				div(class="col-md-12")
+					div(class="panel panel-default")
+						div(class="panel-heading")
+							h3(class="panel-title") Gear Trains
+						div(class="panel-body") Extreme gear ratios can be achieved by stacking gears in a gear box. Incredible changes in both speed and torque can be accomplished with a little ingenuity.
+							img(src="/images/gears/reducinggeartrain.jpg")
+			btn(type="button", class="btn btn-lg btn-default") Next Topic
+			
+			
+	
+
+	div(id="footer")
+		div(class="container")
+			p(class="text-muted")
+				a(href="http://www.facebook.com") Facebook		
+				

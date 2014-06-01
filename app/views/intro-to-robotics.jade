@@ -1,0 +1,84 @@
+doctype html
+html
+head
+	title= title
+	link(rel='stylesheet', href='/bootstrap-3.1.1/css/bootstrap.min.css')
+	link(rel='stylesheet', href='/bootstrap-3.1.1/css/dashboard.css')
+	link(rel='stylesheet', href='/bootstrap-3.1.1/css/stickey-footer.css')
+	script(type='text/javascript', href='/bootstrap-3.1.1/js/boostrap.min.js')
+	script(type='text/javascript', href='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+	script(type='text/javascript', href='/bootstrap-3.1.1/js/docs.min.js')
+body
+	div(class="navbar navbar-inverse navbar-fixed-top" role="navigation")
+		div(class="container-fluid")
+			button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
+				span(span class="sr-only") Toggle navigation
+				span(class="icon-bar")
+				span(class="icon-bar")
+				span(class="icon-bar")
+			a(class="navbar-brand" href="#") Torque
+			div(class="navbar-collapse collapse")
+				ul(class="nav navbar-nav navbar-right")
+					li
+						a(href="#") Dashboard
+					li
+						a(href="#") Settings
+					li
+						a(href="#") Profile
+					li
+						a(href="#") Help
+
+						
+	div(class="container-fluid")
+		div(class="row")
+			div(class="col-sm-3 col-md-2 sidebar")
+				ul(class="nav nav-sidebar")
+					li
+						a(href="#") Overview
+					li
+						a(href="#")	My Lessons
+					li
+						a(href="#") My Badges
+					li
+						a(href="#") My Classroom
+						
+				ul(class="nav nav-sidebar")
+					li
+						a(href="#") Search Lessons
+					li
+						a(href="#") Biology
+					li
+						a(href="#") Chemistry
+					li
+						a(href="#") Math
+					li
+						a(href="#") Computer Science
+						
+		div(class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main")
+			h3(class="page-header") Introduction to Robotics
+			div(class="row placeholders")
+				div(class="col-xs-6 col-sm-3 placeholder")
+					iframe(width="760", height="515", src="//www.youtube.com/embed/Ml1J5w20tB4", frameborder="0", allowfullscreen)
+			br
+			p In this course, we just the Lego EV3 Robotics kit. It is a very extensible and powerful platform for learning the fundamentals of robotics engineering and programming.
+			p An EV3 kit is not required to learn the information taught here, but there are several companion courses that help you build the robots that we use in each lesson.
+			p For our purposes, a robot is a electro-mechanical machine that is used to perform a job or a task. Though plenty of robots can be controlled with a remote, we will focus 
+			p mainly on those that are autonomous. 
+			br
+			p KEYWORD: Autonomous: having the power or right to govern itself.
+			br
+			p Not to be confused with the robot being artificially intelligent; rather it means that we program the robot to do each and every move or decision that it makes. 
+			p Robots can be found in many different industries like manufacturing, medicine, engineering, and education. In Torque, we focus on STEM fundamentals like mathematics, 
+			p engineering, and computer science to build our robots. We investigate how these robots can be used in areas like the natural sciences, engineering, and other industries. 
+			br
+			p Our next topic introduces the Lego EV3 kit and discusses the various components that it is comprised of. 
+			btn(type="button", class="btn btn-lg btn-default", onclick="location.href='/intro-to-ev3'") Next Topic
+			
+			
+	
+
+	div(id="footer")
+		div(class="container")
+			p(class="text-muted")
+				a(href="http://www.facebook.com") Facebook		
+				
