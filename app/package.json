@@ -13,15 +13,23 @@
     "morgan": "~1.0.0",
     "cookie-parser": "~1.0.1",
     "body-parser": "~1.0.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.0.1",
     "debug": "~0.7.4",
+    "ejs": "*",
+    "express": "~4.2.0",
+    "express-session": "^1.2.1",
+    "http": "*",
     "jade": "~1.3.0",
-	"mongodb": "*",
-	"mongoose" : "*",
-	"ejs": "*",
-	"http": "*",
-	"passport":"*"
+    "mongodb": "*",
+    "mongoose": "*",
+    "morgan": "~1.0.0",
+    "passport": "^0.2.0",
+    "passport-stormpath": "^0.1.0",
+    "static-favicon": "~1.0.0",
+    "stormpath": "^0.1.2"
   },
-  "engines":{
-	"node":">=0.6"
-	}
+  "engines": {
+    "node": ">=0.6"
+  }
 }

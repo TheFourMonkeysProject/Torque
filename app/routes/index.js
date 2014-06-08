@@ -2,7 +2,12 @@ var express = require('express');
 var mongoose = require('mongoose');
 var crypto = require('crypto');
 var bcrypt = require('bcrypt')
+<<<<<<< HEAD
 var session = require('express-session');
+=======
+
+
+>>>>>>> d97504df466bf81e8733c3110402031431f7adb0
 var router = express.Router();
 
 
@@ -31,6 +36,15 @@ var userSchema = new mongoose.Schema({
   lastName: String
 });
 
+function restrict(req, res, next) {
+  if (req.session.user) {
+    next();
+  } else {
+    req.session.error = 'Access denied!';
+    res.redirect('/login');
+  }
+}
+
 // Compile a 'User' model using the userSchema as the structure.
 // Mongoose also creates a MongoDB collection called 'User' for these documents.
 var user = mongoose.model('user', userSchema);
@@ -57,7 +71,16 @@ router.get('/login', function(req, res) {
 
 /* GET home page. */
 router.get('/myhome', restrict, function(req, res) {
+<<<<<<< HEAD
   res.render('myhome');
+=======
+
+	if(!req.user || req.user.status != 'ENABLED'){
+		return res.redirect('/login')
+	}
+	
+	res.render('myhome');
+>>>>>>> d97504df466bf81e8733c3110402031431f7adb0
 });
 
 /* GET home page. */
@@ -76,7 +99,7 @@ router.get('/intro-to-gears', function(req, res) {
 
 /*
 	Login to app or return to login page if pwd/user incorrect or not found. 
-*/
+
 
 
 router.post('/login', function(req, res){
@@ -96,5 +119,5 @@ router.post('/login', function(req, res){
  
   });
 });
-
+*/
 module.exports = router;
