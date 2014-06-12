@@ -9,7 +9,7 @@ var util = require('util');
 var session = require('express-session');
 var flash = require('connect-flash');
 var passport = require('passport');
-var StormpathStrategy = require('passport-stormpath'); 	
+var StormpathStrategy = require('passport-stormpath');
 
 
 var routes = require('./routes/index');
