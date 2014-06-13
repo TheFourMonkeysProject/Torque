@@ -10,13 +10,18 @@ var session = require('express-session');
 var flash = require('connect-flash');
 var passport = require('passport');
 var StormpathStrategy = require('passport-stormpath'); 	
-
+var stormpath = require('stormpath');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
 var strategy = new StormpathStrategy();
+
+passport.use(strategy);
+passport.serializeUser(strategy.serializeUser);
+passport.deserializeUser(strategy.deserializeUser);
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -30,6 +35,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({ secret: process.env.EXPRESS_SECRET, key: 'sid', cookie: {secure: false} }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
 
 app.use('/', routes);
 app.use('/users', users);

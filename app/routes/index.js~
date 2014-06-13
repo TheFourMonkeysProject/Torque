@@ -2,8 +2,6 @@ var express = require('express');
 var mongoose = require('mongoose');
 var crypto = require('crypto');
 var bcrypt = require('bcrypt')
-
-
 var passport = require('passport');
 var stormpath = require('stormpath');
 
@@ -98,7 +96,7 @@ router.post(
     'stormpath',
     {
       successRedirect: '/myhome',
-      failureRedirect: '/login',
+      failureRedirect: '/',
       failureFlash: 'Invalid email or password.',
     }
   )
