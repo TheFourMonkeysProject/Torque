@@ -39,7 +39,16 @@ router.get('/login', function(req, res) {
 */
 /* GET home page. */
 router.get('/myhome', function(req, res) {
-  res.render('myhome');
+  if (!req.user || req.user.status !== 'ENABLED') {
+    return res.redirect('/login');
+  }
+
+  res.render('myhome', {
+    title: 'Home',
+    user: req.user,
+    }
+  );
+  //res.render('myhome');
 });
 
 /* GET home page. */
