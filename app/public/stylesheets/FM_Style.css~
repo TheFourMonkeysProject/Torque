@@ -39,14 +39,6 @@
   border-radius: 0;
 }
 
-#firstname{
-	width: 450px;
-	height: 50px;
-}
-#lastname{
-	width: 450px;
-	height: 50px;
-}
 #username{
 	width: 450px;
 	height: 50px;

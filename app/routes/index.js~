@@ -28,37 +28,12 @@ var user = mongoose.model('user', userSchema);
 
 /* GET home page. */
 router.get('/', function(req, res) {
-
-  var email = 'mdl2066@yahoo.com';
-  // Initialize our Stormpath client.
-  var apiKey = new stormpath.ApiKey(
-    process.env['STORMPATH_API_KEY_ID'],
-    process.env['STORMPATH_API_KEY_SECRET']
-  );
-  var spClient = new stormpath.Client({ apiKey: apiKey });
-
-  // Grab our app, then attempt to create this user's account.
-  var app = spClient.getAccount(process.env['STORMPATH_APP_HREF'], function(err, app) {
-    if (err) throw err;
-
-    app.getAccount({
-      email: username
-    }, function (err, createdAccount) {
-      if (err) {
-        return res.render('register', {'title': 'Register', error: err.userMessage });
-      } else {
-        passport.authenticate('stormpath')(req, res, function () {
-          return res.redirect('/myhome');
-        });
-      }
-    });
-
-  });
   res.render('home2.html');
 });
 
 
-/* GET home page. router.get('/login', function(req, res) {
+/* GET home page. 
+router.get('/login', function(req, res) {
   res.render('login');
 });
 */
@@ -189,6 +164,4 @@ router.post('/register', function(req, res) {
   });
 
 });
-
-
 module.exports = router;

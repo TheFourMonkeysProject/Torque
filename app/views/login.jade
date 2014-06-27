@@ -2,31 +2,24 @@ extends s_layout
 
 block body
 
-  .login
-    .row
-      .col-lg-6.col-lg-offset-3
-        form.bs-example.form-horizontal(method='post', action='')
-          fieldset
-            legend Login
+        form(method='post', action='')
+            h1 Member Login
             if error
               .alert.alert-dismissable.alert-danger.login-fail
                 button.close(type='button', data-dismiss='alert') &times;
                 p.
                   #{error}
-            p.last-p.
-              Once you enter your credentials and hit the Login button below,
-              your credentials will be securely sent to
-              <a href="https://stormpath.com">Stormpath</a> and verified.  If
-              your credentials are valid, you'll be logged in using a secure
-              session -- otherwise, you'll get a user friendly error message.
-            .form-group
-              label.col-lg-4.control-label(for='username') Email
-              .col-lg-4
-                input#username.form-control(type='email', name='username', placeholder='Email', autofocus)
-            .form-group
-              label.col-lg-4.control-label(for='password') Password
-              .col-lg-4
-                input#password.form-control(type='password', name='password', placeholder='Password')
-            .form-group
-              .col-lg-10.col-lg-offset-4
-                button.btn.btn-primary(type='submit') Login
+             br.
+            
+            p. Email Address
+            input#username.form-control(name='username', type='email', placeholder='Email', autofocus)
+            br
+            p. Password
+            input#password.form-control(name='password', type='password', placeholder='Password')
+            br
+            button#register.btn.btn-primary(type='submit') <strong>Login</strong>
+            br
+            p.
+              Secure Server <img src="/images/padlock_small.png"></img>
+            br
+            p. Not a Member? <a href="/register">Click Here</register
